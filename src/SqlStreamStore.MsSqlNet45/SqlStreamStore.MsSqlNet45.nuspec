@@ -6,7 +6,7 @@
     <description>Net 451 version of myssql package</description>
     <authors>Yannick Motton</authors>
 		<dependencies>
-			<dependency id="SqlStreamStoreNet45" version="0.9.0" />
+			<dependency id="SqlStreamStore.Net45" version="0.9.0" />
 		</dependencies>
     </metadata>
 </package>
