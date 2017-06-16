@@ -7,8 +7,8 @@
     <ProjectGuid>{3B584C91-3E20-4AF7-BDD4-0321D8578700}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SqlStreamStoreNet45</RootNamespace>
-    <AssemblyName>SqlStreamStoreNet45</AssemblyName>
+    <RootNamespace>SqlStreamStore</RootNamespace>
+    <AssemblyName>SqlStreamStore.Net45</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
