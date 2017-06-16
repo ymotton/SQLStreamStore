@@ -80,7 +80,13 @@
         /// <typeparam name="TResult">The type of the result of the TCS.</typeparam>
         public static TaskCompletionSource<TResult> CreateAsyncTaskSource<TResult>()
         {
-            return new TaskCompletionSource<TResult>(TaskCreationOptions.RunContinuationsAsynchronously);
+            return new TaskCompletionSource<TResult>(
+#if NET451
+                TaskCreationOptionsEx.RunContinuationsAsynchronously
+#else
+                TaskCreationOptions.RunContinuationsAsynchronously
+#endif
+                );
         }
     }
 }

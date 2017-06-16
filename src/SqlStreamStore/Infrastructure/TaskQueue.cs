@@ -26,7 +26,11 @@
             var task = Enqueue(_ =>
             {
                 action();
+#if NET451
+                return TaskEx.CompletedTask;
+#else
                 return Task.CompletedTask;
+#endif
             });
             return task;
         }

@@ -66,7 +66,11 @@
         public static Task<T> Enqueue<T>(this IAsyncWaitQueue<T> @this, object mutex, CancellationToken token)
         {
             if (token.IsCancellationRequested)
+#if NET451
+                return TaskEx.FromCanceled<T>(token);
+#else
                 return Task.FromCanceled<T>(token);
+#endif
 
             var ret = @this.Enqueue();
             if (!token.CanBeCanceled)

@@ -62,7 +62,11 @@
         {
             get
             {
+#if NET451
+                return TaskEx.CompletedTask;
+#else
                 return Task.CompletedTask;
+#endif
             }
         }
 
@@ -85,7 +89,12 @@
     public static class TaskConstants<T>
     {
         private static readonly Task<T> defaultValue = Task.FromResult(default(T));
-        private static readonly Task<T> canceled = Task.FromCanceled<T>(new CancellationToken(true));
+        private static readonly Task<T> canceled =
+#if NET451
+            TaskEx.FromCanceled<T>(new CancellationToken(true));
+#else
+            Task.FromCanceled<T>(new CancellationToken(true));
+#endif
 
         /// <summary>
         /// A task that has been completed with the default value of <typeparamref name="T"/>.
