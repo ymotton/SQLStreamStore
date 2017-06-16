@@ -3,8 +3,8 @@
     <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <description>$desc$</description>
-    <authors>$author$</authors>
+    <description>Net 451 version of myssql package</description>
+    <authors>Yannick Motton</authors>
 		<dependencies>
 			<dependency id="SqlStreamStoreNet45" version="1.1.0" />
 		</dependencies>
