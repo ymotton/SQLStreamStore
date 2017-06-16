@@ -7,8 +7,8 @@
     <ProjectGuid>{568F04F0-4270-4430-93F8-C0D3340047AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SqlStreamStore.MsSqlNet45</RootNamespace>
-    <AssemblyName>SqlStreamStore.MsSqlNet45</AssemblyName>
+    <RootNamespace>SqlStreamStore.MsSql</RootNamespace>
+    <AssemblyName>SqlStreamStore.MsSql</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -162,6 +162,11 @@
       <Project>{3b584c91-3e20-4af7-bdd4-0321d8578700}</Project>
       <Name>SqlStreamStoreNet45</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SqlStreamStore.MsSqlNet45.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
